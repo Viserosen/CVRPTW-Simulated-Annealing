@@ -403,11 +403,15 @@ int main(int argc, char *argv[])
     {
         inputfile = argv[1];
         outputfile = argv[2];
+        if (argc >= 3)
+        {
+            solution_time = atoi(argv[3]);
+        }
     }
     else
     {
-        inputfile = "dane.txt";
-        outputfile = "wynik.txt";
+        inputfile = "data.txt";
+        outputfile = "solution.txt";
     }
 
     data_read(inputfile);
